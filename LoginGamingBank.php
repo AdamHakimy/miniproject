@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </center>
 </body>
 </html>';
-        header("refresh:3;url=PBLLogin1.html");
+        header("refresh:3;url=miniproject/PBLLogin1.html");
         exit();
     }
 
