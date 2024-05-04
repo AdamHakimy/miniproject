@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("https://images.hdqwalls.com/wallpapers/2023-battlefield-2042-game-4k-21.jpg");
+  background-image: url("../img/bg.jpg");
   background-size: cover;
 }
   input[type=email], input[type=password] {
@@ -13,4 +13,14 @@ body {
   background: rgba(255, 255, 255, 0.1); /* Adjust background color for better visibility */
   color: white; /* Change text color to white */
   border-radius: 10px;
+box-sizing: border-box;
+}
+
+.special{
+  background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 10px;
+      width: 30%;
+      margin: 0 auto;
+	  border-radius: 10px;
 }
