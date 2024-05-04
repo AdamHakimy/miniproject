@@ -1,0 +1,63 @@
+
+body {
+  background-image: url("https://images.hdqwalls.com/wallpapers/2023-battlefield-2042-game-4k-21.jpg");
+  background-size: cover;
+}
+div.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+form {
+  background-color: transparent; 
+  padding: 20px;
+  
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+  border-radius: 10px;
+}
+input[type=reset] {
+  background-color: #555;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 10px;
+}
+input[type=reset]:hover {
+  background-color: #666;
+}
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid #fff; /* Change border color to white */
+  background: rgba(255, 255, 255, 0.1); /* Adjust background color for better visibility */
+  color: white; /* Change text color to white */
+  border-radius: 10px;
+}
+select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding in the width */
+}
