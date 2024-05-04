@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         // User exists, set session variables and redirect to GamingBank2.html
         $_SESSION['email'] = $email;
-        header("Location: ../GamingBank2.html");
+        header("Location: ./GamingBank2.html");
         exit();
     } else {
         // Invalid credentials, display error message
