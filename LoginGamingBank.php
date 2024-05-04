@@ -1,3 +1,35 @@
+<?php
+session_start(); // Start session to persist user login status
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "GamingBank";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Retrieve user input from login form
+    $email = $_POST['email'];
+    $password = $_POST['passID'];
+
+    // Prepare SQL statement to check if the user exists
+    $sql = "SELECT * FROM USERinf WHERE email='$email' AND password='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        // User exists, set session variables and redirect to GamingBank2.html
+        $_SESSION['email'] = $email;
+        header("Location: GamingBank2.html");
+        exit();
+    } else {
+        // Invalid credentials, display error message
+         echo '
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +94,7 @@
             <h4>Eat. Sleep. Game. Repeat.</h4></marquee></td>
           </tr>
           <tr>
-            <td><h4><a href="miniproject/RegisterGame.html"><font color="#4CAF50">Create Account</font></a></h4></td>
+            <td><h4><a href="RegisterGame.html"><font color="#4CAF50">Create Account</font></a></h4></td>
             <td align="right">
               <input type="submit" value="Login" style="background-color:#4CAF50; padding: 10px; color: white; border: none; cursor: pointer; border-radius: 10px;">
               <input type="reset" value="Reset" style="background-color:#4CAF50; padding: 10px; color: white; border: none; cursor: pointer; border-radius: 10px;">
@@ -70,7 +102,20 @@
           </tr>
         </table>
       </form>
-    </div>
+    <div style="background-color: rgba(255, 0, 0, 0.5); color: white; padding: 10px; margin-top: 20px; text-align: center;border-radius: 10px;">
+        Email or password is incorrect
+		<br>
+		<img src ="https://media1.tenor.com/m/ap6LSaSeQ_kAAAAC/ishowspeed-try-not-to-laugh.gif">
+		</div>
+	</div>
   </center>
 </body>
-</html>
+</html>';
+        header("refresh:3;url=miniproject/PBLLogin1.html");
+        exit();
+    }
+
+    $conn->close();
+}
+?>
+ 
