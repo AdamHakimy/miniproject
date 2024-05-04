@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <style>
+    body {
+      background-image: url("https://images.hdqwalls.com/wallpapers/2023-battlefield-2042-game-4k-21.jpg");
+      background-size: cover;
+    }
+    div.container {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      width: 30%;
+      margin: 0 auto;
+	  border-radius: 10px;
+    }
+    form {
+      background-color: transparent; 
+      padding: 20px;
+	  
+    }
+    input[type=submit] {
+      background-color: #4CAF50;
+      padding: 10px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+	  border-radius: 10px;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+	  border-radius: 10px;
+    }
+    input[type=reset] {
+      background-color: #555;
+      padding: 10px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+	  border-radius: 10px;
+    }
+    input[type=reset]:hover {
+      background-color: #666;
+    }
+    input[type=text], input[type=email], input[type=password] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 10px 0;
+      display: inline-block;
+      border: none;
+      border-bottom: 1px solid #fff; /* Change border color to white */
+      background: rgba(255, 255, 255, 0.1); /* Adjust background color for better visibility */
+      color: white; /* Change text color to white */
+	  border-radius: 10px;
+    }
+	select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 10px 0;
+      display: inline-block;
+      border: 1px solid #ccc; /* Light gray border */
+      border-radius: 5px; /* Rounded corners */
+      box-sizing: border-box; /* Include padding in the width */
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <br><br><br><br><br><br><br><br>
+    <div class="container">
+      <img src="https://cdn-icons-png.flaticon.com/512/4704/4704504.png" width="60" height="60">
+      <h1 align="center">Gaming Bank</h1>
+      <br><br><br>
+      <h3>Basic Information</h3>
+      <p>Enter the following</p>
+      <form  action="GamingBankData.php" method="post">
+        <table border="0">
+          <tr> 
+            <td>USERNAME</td>
+            <td><input type="text" name="Uname"></td>
+          </tr>
+          <tr> 
+            <td>EMAIL</td>
+            <td><input type="email" name="email"></td>
+          </tr>
+          <tr> 
+            <td>PASSWORD</td>
+            <td><input type="password" name="passID"></td>
+          </tr>
+		  
+		  <br>
+		  <table border="0">
+          <tr>
+		  <td>Birthday:</td>
+            <td>
+              <input type="text" name="Day" placeholder="Day">
+              <select name="Month">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+              <input type="text" name="Year" placeholder="Year">
+            </td>
+          </tr>
+        
+        </table>
+		  <table>
+		  <tr>
+            <td align="center">
+              <input type="radio" id="male" name="gender"><label for="male">Male</label>
+              <input type="radio" id="female" name="gender"><label for="female">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <textarea rows="5" name="desc" placeholder="Describe yourself here..."></textarea>
+            </td>
+          </tr></table>
+		  
+        </table>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+  </center>
+</body>
+</html>
