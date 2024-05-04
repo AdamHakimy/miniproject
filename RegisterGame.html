@@ -1,78 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="./css/RegisterGame.css">
-<head>
-  <title>Register</title>
-
-</head>
-<body>
-  <center>
-    <br><br><br><br><br><br><br><br>
-    <div class="container">
-      <img src="./img/gamingbanklogo.png" width="60" height="60">
-      <h1 align="center">Gaming Bank</h1>
-      <br><br><br>
-      <h3>Basic Information</h3>
-      <p>Enter the following</p>
-      <form  action="./php/GamingBankData.php" method="post">
-        <table border="0">
-          <tr> 
-            <td>USERNAME</td>
-            <td><input type="text" name="Uname"></td>
-          </tr>
-          <tr> 
-            <td>EMAIL</td>
-            <td><input type="email" name="email"></td>
-          </tr>
-          <tr> 
-            <td>PASSWORD</td>
-            <td><input type="password" name="passID"></td>
-          </tr>
-		  
-		  <br>
-		  <table border="0">
-          <tr>
-		  <td>Birthday:</td>
-            <td>
-              <input type="text" name="Day" placeholder="Day">
-              <select name="Month">
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-                <option>May</option>
-                <option>June</option>
-                <option>July</option>
-                <option>August</option>
-                <option>September</option>
-                <option>October</option>
-                <option>November</option>
-                <option>December</option>
-              </select>
-              <input type="text" name="Year" placeholder="Year">
-            </td>
-          </tr>
-        
-        </table>
-		  <table>
-		  <tr>
-            <td align="center">
-              <input type="radio" id="male" name="gender"><label for="male">Male</label>
-              <input type="radio" id="female" name="gender"><label for="female">Female</label>
-            </td>
-          </tr>
-          <tr>
-            <td align="center">
-              <textarea rows="5" name="desc" placeholder="Describe yourself here..."></textarea>
-            </td>
-          </tr></table>
-		  
-        </table>
-        <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-      </form>
-    </div>
-  </center>
-</body>
+	<head>
+		<title>Register</title>
+		<link rel="stylesheet" href="./css/GameProfile.css">
+	</head>
+	<body>
+		<div class="container" align="center">
+			<img src="./img/gamingbanklogo.png" width="60" height="60">
+			<h1>Gaming Bank</h1>
+			<p>Enter the following</p>
+			<form action="./php/GamingBankData.php" method="post" align="left">
+				<center>
+					<input name="Uname" type="text" placeholder="Username"> 
+          <input type="email" name="email" placeholder="Email"> 
+          <input type="password" name="passID" placeholder="Password"> <br><br>
+					<font color="grey" size="-1">Date of birth: </font> <br> <input name="Day" type="text" class="mini" placeholder="Day"> 
+					<select name="Month" class="mini grey">
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+					<input name="Year" type="text" class="mini" placeholder="Year"> 
+          <br><br>
+           <input type="radio" id="male" name="gender"><label for="male">Male</label> 
+           <input type="radio" id="female" name="gender"><label for="female">Female</label> 
+					<textarea name="desc" rows="5" placeholder="Describe yourself here..."></textarea>
+					<input type="submit" value="Submit"> <input type="reset" value="Reset">
+				</center>
+			</form>
+		</div>
+	</body>
 </html>
