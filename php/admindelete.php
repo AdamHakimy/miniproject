@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "GamingBank";
-$search = $_POST["username"];
+$delete = $_POST["id"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, username, email, birthday FROM UserInf WHERE username= '$search' ";
+$sql = "DELETE FROM UserInf WHERE id= '$delete' ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -63,10 +63,10 @@ $conn->close();
 
 
         <div class="align">
-        <input type="text" name="id" value="<?php echo $id; ?>" placeholder="Username">
-        <input type="text" name="Uname" value="<?php echo $username; ?>" placeholder="Username">
-            <input type="email" name="email" value="<?php echo $email1; ?>" placeholder="Email">
-            <input type="text" name="Day" value="<?php echo $birthday; ?>" class="mini" placeholder="Day">
+        <input type="text" name="id" placeholder="Username">
+        <input type="text" placeholder="username" name="username">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="birthdate" class="mini" placeholder="Day">
         </div>
     </form>
 
