@@ -10,6 +10,9 @@ body{
     flex-direction: column;
 }
 
+form{
+    background-color: red;
+}
 
 
 div.header{
@@ -21,7 +24,6 @@ div.header{
 
 .main{
     display: flex;
-    justify-content: space-between;
     gap: 3em;
     align-items: center;
     flex: 1;
@@ -30,15 +32,18 @@ div.header{
 .container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex: 1;
     gap: 4em;
 	background: rgba(0, 0, 0, 0.8);
 	color: white;
 	padding: 1em;
+    height: 70%;
 	border-radius: 10px;
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	border: 1px solid rgba(255, 255, 255, 1);
+
 }
 
 .align{

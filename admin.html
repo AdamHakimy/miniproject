@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="./css/admin.css">
 </head>
 <body>
 
@@ -21,47 +21,56 @@
 
 <div class="main">
 
-    <div class="container">
+
+
+        <form action="php/adminsearch.php" method="post" class="container">
         <h1>Search</h1>
         <div class="align">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search Username" name="username">
             <button>GO!</button>
         </div>
 
-        <div class="align">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
-        </div>
-    </div>
 
-    <div class="container">
+        <div class="align">
+        <input type="text" name="Uname" placeholder="Username">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="Day" class="mini" placeholder="Day">
+        </div>
+    </form>
+
+
+
+    <form action="php/admindelete.php" method="post" class="container">
         <h1>Delete</h1>
         <div class="align">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Enter ID" name="username">
             <button>GO!</button>
         </div>
 
-        <div class="align">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
-        </div>
-    </div>
+        <input type="text" placeholder="" name="username">
+    </form>
 
-    <div class="container">
+    <form action="php/adminupdate.php" method="post" class="container">
         <h1>Update</h1>
         <div class="align">
-            <input type="text" placeholder="Search">
+
+
+            <input type="text" placeholder="ID to change" name="username">
+            <br>
+
+            <input type="text" placeholder="New username" name="username">
+            <input type="email" name="New email" placeholder="Email">
+            <input type="text" name="New birthdate" class="mini" placeholder="Day">
             <button>GO!</button>
         </div>
 
+
         <div class="align">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
-            <input type="text" placeholder="test">
+        <input type="text" name="Uname" placeholder="Username">
+        <input type="email" name="email" placeholder="Email">
+        <input type="text" name="Day" class="mini" placeholder="Day">
         </div>
-    </div>
+    </form>
 
 
 

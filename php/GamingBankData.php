@@ -26,7 +26,7 @@ if(isset($_POST['Uname']) && isset($_POST['email']) && isset($_POST['passID']) &
     VALUES ('$username', '$email', '$password','$birthday')";
 
     if ($conn->query($sql) === TRUE) {
-       header("Location: PBLLogin1.html");
+       header("Location: ../PBLLogin1.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
