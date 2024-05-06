@@ -54,26 +54,28 @@ $conn->close();
 
 
 
-        <form action="adminsearch.php" method="post" class="container">
+<div class="container">
+        <form action="adminsearch.php" method="post">
         <h1>Search</h1>
         <div class="align">
             <input type="text" placeholder="Search" name="username">
             <button>GO!</button>
         </div>
 
-
+        </form>
         <div class="align">
         <input type="text" name="id" value="<?php echo $id; ?>" placeholder="Username">
         <input type="text" name="Uname" value="<?php echo $username; ?>" placeholder="Username">
             <input type="email" name="email" value="<?php echo $email1; ?>" placeholder="Email">
             <input type="text" name="Day" value="<?php echo $birthday; ?>" class="mini" placeholder="Day">
         </div>
-    </form>
+
+    </div>
 
 
 
     <form action="admindelete.php" method="post" class="container">
-        <h1>Search</h1>
+        <h1>Delete</h1>
         <div class="align">
         <input type="text" placeholder="Enter ID" name="id">
             <button>GO!</button>
