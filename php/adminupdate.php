@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare SQL statement
-    $sql = "UPDATE Userinf SET username='$newUsername', email='$newEmail', password ='$newPassword' WHERE id='$idToChange'";
+    $sql = "UPDATE UserInf SET username='$newUsername', email='$newEmail', birthdate='$newBirthdate' WHERE id='$idToChange'";
 
     // Execute SQL statement
     if ($conn->query($sql) === TRUE) {

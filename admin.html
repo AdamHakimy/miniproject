@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/admin.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/admin.css" />
+	</head>
+	<body>
+		<nav>
+			<div class="header">
+				<h1>ADMIN VIEW</h1>
+				<a href="./GamingBank2.html">Go to main page</a>
+				<div>
+					<img src="./img/gamingbanklogo.png" width="60" height="60" />
+					<h3>Gaming Bank</h3>
+				</div>
+			</div>
+		</nav>
 
-<nav>
-    <div class="header">
-        <h1>ADMIN VIEW</h1>
-        <a href="./GamingBank2.html">Go to main page</a>
-        <div>    
-        <img src="./img/gamingbanklogo.png" width="60" height="60">
-        <h3> Gaming Bank</h3>
-    </div>
-    </div>
-</nav>
+		<div class="main">
+			<form action="php/adminsearch.php" method="post" class="container">
+				<h1>Search</h1>
+				<div class="align">
+					<input type="text" placeholder="Search Username" name="username" />
+					<button>GO!</button>
+				</div>
 
-<div class="main">
+				<div class="align">
+					<input type="text" name="Uname" placeholder="Username" />
+					<input type="email" name="email" placeholder="Email" />
+					<input type="text" name="Day" class="mini" placeholder="Day" />
+				</div>
+			</form>
 
+			<form action="php/admindelete.php" method="post" class="container">
+				<h1>Delete</h1>
+				<div class="align">
+					<input type="text" placeholder="Enter ID" name="id" />
+					<button>GO!</button>
+				</div>
 
+				<input type="text" placeholder="" name="username" />
+			</form>
 
-        <form action="php/adminsearch.php" method="post" class="container">
-        <h1>Search</h1>
-        <div class="align">
-            <input type="text" placeholder="Search Username" name="username">
-            <button>GO!</button>
-        </div>
-
-
-        <div class="align">
-        <input type="text" name="Uname" placeholder="Username">
-        <input type="email" name="email" placeholder="Email">
-        <input type="text" name="Day" class="mini" placeholder="Day">
-        </div>
-    </form>
-
-
-
-    <form action="./php/admindelete.php" method="post" class="container">
-        <h1>Delete</h1>
-        <div class="align">
-            <input type="text" placeholder="Enter ID" name="id">
-            <button>GO!</button>
-        </div>
-
-        <input type="text" placeholder="" name="username">
-    </form>
-
-    <form action="php/adminupdate.php" method="post" class="container">
-        <h1>Update</h1>
-        <div class="align">
-
-
-            <input type="text" placeholder="ID to change" name="id">
-            <br>
+			<form action="php/adminupdate.php" method="post" class="container">
+				<h1>Update</h1>
+				<div class="align">
+					<input type="text" placeholder="ID to change" name="id" />
+					<br />
 
             <input type="text" placeholder="New username" name="username">
             <input type="email" name="email" placeholder="New email">
@@ -70,24 +61,24 @@
 
 </div>
 
-<div class="container">
-    <h1>View All Customers</h1>
+		<div class="container">
+			<h1>View All Customers</h1>
 
-    <form action="./php/count.php" method="post">
-    <Center>
-<button>View Now</button></Center>
-</form>
-</div>
+			<form action="./php/count.php" method="post">
+				<center>
+					<button>View Now</button>
+				</center>
+			</form>
+		</div>
 
-<div class="container">
-    <h1>Count number of games</h1>
+		<div class="container">
+			<h1>Count number of games</h1>
 
-    <form action="./test.php" method="post">
-    <Center>
-<button>View Now</button></Center>
-</form>
-</div>
-
-    
-</body>
+			<form action="./test.php" method="post">
+				<center>
+					<button>View Now</button>
+				</center>
+			</form>
+		</div>
+	</body>
 </html>
