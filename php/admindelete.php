@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
         $username = $row["username"];
         $email1 = $row["email"];
         $birthday = $row["birthday"];
-    }
+    } 
 } else {
     echo "0 results";
 }
@@ -75,7 +75,7 @@ $conn->close();
 
 
     <form action="admindelete.php" method="post" class="container">
-        <h1>Search</h1>
+        <h1>Delete</h1>
         <div class="align">
         <input type="text" placeholder="Enter ID" name="id">
             <button>GO!</button>

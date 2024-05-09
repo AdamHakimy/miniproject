@@ -6,14 +6,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $idToChange = $_POST["id"];
     $newUsername = $_POST["username"];
     $newEmail = $_POST["email"];
-    $newBirthdate = $_POST["day"];
+    $newPassword = $_POST["password"];
 
     // Validate and sanitize input data (You may add more validation as needed)
     // For simplicity, I'm just trimming whitespace here
     $idToChange = trim($idToChange);
     $newUsername = trim($newUsername);
     $newEmail = trim($newEmail);
-    $newBirthdate = trim($newBirthdate);
+    $newPassword = trim($newPassword);
 
     $servername = "localhost";
     $username = "root";
@@ -29,11 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare SQL statement
-    $sql = "UPDATE your_table SET username='$newUsername', email='$newEmail', birthdate='$newBirthdate' WHERE id='$idToChange'";
+    $sql = "UPDATE Userinf SET username='$newUsername', email='$newEmail', password ='$newPassword' WHERE id='$idToChange'";
 
     // Execute SQL statement
     if ($conn->query($sql) === TRUE) {
-        echo "<p>Record updated successfully</p>";
+        header("refresh:3;url=../admin.html"
+    );
+        exit();
     } else {
         echo "Error updating record: " . $conn->error;
     }
